@@ -1,0 +1,11 @@
+grant {
+
+//  permission java.security.AllPermission;
+// For RMI
+
+permission java.net.SocketPermission "*:1024-65535", "connect,accept,resolve";
+
+// For dynamic downloading of the codebase
+permission java.net.SocketPermission "*:80", "connect";
+
+};

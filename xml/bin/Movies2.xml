@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE movies [
+
+	<!ELEMENT movies (movie*) >
+	<!ELEMENT movie (title, genre, actor+, plot) >
+	<!ELEMENT title (#PCDATA) >
+	<!ELEMENT genre (#PCDATA) >
+	<!ELEMENT actor (#PCDATA) >
+	<!ELEMENT plot (#PCDATA) >
+
+	<!ATTLIST movie year CDATA #REQUIRED>
+
+]>
+
+<movies>
+
+	<movie year="2009">
+		<title>Avatar</title>
+		<genre>Sci-Fi</genre>
+		<actor>Sam Worthington</actor>
+		<actor>Zoe Saldana</actor>
+		<actor>Sigourney Weaver</actor>
+		<plot>A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</plot>
+	</movie>
+
+	<movie year="2009">
+		<title>2012</title>
+		<genre>Disaster</genre>
+		<actor>John Cusack</actor>
+		<actor>Amanda Peet</actor>
+		<plot>An epic adventure about a global cataclysm that brings an end to the world and tells of the heroic struggle of the survivors.</plot>
+	</movie>
+
+	<movie year="2010">
+		<title>Shutter Island</title>
+		<genre>Drama</genre>
+		<actor>Leonardo DiCaprio</actor>
+		<actor>Mark Ruffalo</actor>
+		<actor>Ben Kingsley</actor>
+		<plot>Drama is set in 1954, U.S. Marshal Teddy Daniels is investigating the disappearance of a murderess who escaped from a hospital for the criminally insane and is presumed to be hiding on the remote Shutter Island.</plot>
+	</movie>
+
+	<movie year="2009">
+		<title>Sherlock Holmes</title>
+		<genre>Crime</genre>
+		<actor>Robert Downey Jr.</actor>
+		<actor>Jude Law</actor>
+		<actor>Rachel McAdams</actor>
+		<plot>Detective Sherlock Holmes and his stalwart partner Watson engage in a battle of wits and brawn with a nemesis whose plot is a threat to all of England.</plot>
+	</movie>
+
+	<movie year="2009">
+		<title>Up in the Air</title>
+		<genre>Romance</genre>
+		<actor>George Clooney</actor>
+		<actor>Vera Farmiga</actor>
+		<plot>With a job that has him traveling around the country firing people, Ryan Bingham leads an empty life out of a suitcase, until his company does the unexpected: ground him.</plot>
+	</movie>
+
+	<movie year="2010">
+		<title>The Book of Eli</title>
+		<genre>Action</genre>
+		<actor>Denzel Washington</actor>
+		<actor>Gary Oldman</actor>
+		<actor>Mila Kunis</actor>
+		<plot>A post-apocalyptic tale, in which a lone man fights his way across America in order to protect a sacred book that holds the secrets to saving humankind.</plot>
+	</movie>
+
+	<movie year="2010">
+		<title>Alice in Wonderland</title>
+		<genre>Family</genre>
+		<actor>Mia Wasikowska</actor>
+		<actor>Johnny Depp</actor>
+		<actor>Helena Bonham Carter</actor>
+		<plot>19-year-old Alice returns to the magical world from her childhood adventure, where she reunites with her old friends and learns of her true destiny: to end the Red Queen's reign of terror.</plot>
+	</movie>
+
+</movies>

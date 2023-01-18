@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- definition of simple elements -->
+	<xs:element name="title" type="xs:string"/>
+	<xs:element name="genre" type="xs:string"/>
+	<xs:element name="actor" type="xs:string"/>
+	<xs:element name="plot" type="xs:string"/>
+
+	<!-- definition of attributes -->
+	<xs:attribute name="year">
+		<xs:simpleType>
+			<xs:restriction base="xs:int">
+				<xs:minInclusive value="1900"></xs:minInclusive>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<!-- definition of complex elements -->
+	<xs:element name="movie">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title"/>
+				<xs:element ref="genre"/>
+				<xs:element ref="actor" minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="plot"/>
+			</xs:sequence>
+			<xs:attribute ref="year" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="movies">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="movie" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

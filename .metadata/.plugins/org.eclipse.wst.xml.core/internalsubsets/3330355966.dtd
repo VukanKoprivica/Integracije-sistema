@@ -1,0 +1,11 @@
+
+
+	<!ELEMENT movies (movie*) >
+	<!ELEMENT movie (title, genre, actor+, plot) >
+	<!ELEMENT title (#PCDATA) >
+	<!ELEMENT genre (#PCDATA) >
+	<!ELEMENT actor (#PCDATA) >
+	<!ELEMENT plot (#PCDATA) >
+
+	<!ATTLIST movie year CDATA #REQUIRED>
+

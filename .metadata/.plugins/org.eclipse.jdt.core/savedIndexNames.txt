@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Users\vukan\eclipse-workspace-Integracije\.metadata\.plugins\org.eclipse.jdt.core
+3583892109.index
+1848274551.index
+2118617375.index
+3460880079.index
+3920826847.index
+3788634405.index
+1217116457.index

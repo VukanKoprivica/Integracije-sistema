@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xml" default="help" basedir=".">
+
+	<target name="validate">
+		<xmlvalidate>
+			<fileset dir="." includes="*.xml" excludes="build.xml"/>
+			<attribute name="http://apache.org/xml/features/validation/schema" value="true"/>
+			<attribute name="http://xml.org/sax/features/namespaces" value="true"/>
+		</xmlvalidate>
+	</target>
+
+	<target name="sax">
+		<javac srcdir="." destdir="." debug="true" deprecation="true" />
+		<java classname="MoviesSAX" fork="true" />
+	</target>
+
+	<target name="dom">
+		<javac srcdir="." destdir="." debug="true" deprecation="true" />
+		<java classname="MoviesDOM" fork="true" />
+	</target>
+
+	<target name="xslt">
+		<delete file="Movies.txt"/>
+		<xslt in="Movies1.xml" out="Movies.txt" style="Movies.xsl"/>
+		<loadfile property="output" srcFile="Movies.txt"/>
+		<echo>${output}</echo>
+	</target>
+
+	<target name="help">
+		<echo>You must specify the task to run: ant [task]</echo>
+		<echo>where [task] can be one of these:</echo>
+		<echo> - validate</echo>
+		<echo> - sax</echo>
+		<echo> - dom</echo>
+		<echo> - xslt</echo>
+	</target>
+
+</project>
